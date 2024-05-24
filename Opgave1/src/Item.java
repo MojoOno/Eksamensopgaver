@@ -2,14 +2,13 @@ public class Item {
     public String description;
     public boolean isDone;
 
-    public Item(){
 
-    }
     // Constructor
     public Item(String description, boolean isDone){
         this.description = description;
         this.isDone = isDone;
     }
+
     //Getters and Setters
     public String getDescription() {
         return description;
