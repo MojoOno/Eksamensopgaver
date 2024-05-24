@@ -17,10 +17,20 @@ public class Main {
         library.addBook(book4);
         library.addBook(book5);
 
-        user.library.borrowBook(book1.setBorrowed(true));
-
         System.out.println("----------");
         library.displayBooks();
+        System.out.println("----------");
+
+        library.borrowBook(book1);
+
+        System.out.println("----------");
+        //library.displayBooks();
+
+        //library.returnBook(book1);
+
+        System.out.println("----------");
+
+        user.getBorrowedBooks();
 
 
     }

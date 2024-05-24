@@ -5,7 +5,6 @@ public class User {
     public String name;
     public int userNumber;
     List<Book> borrowedBooks;
-    Library library = new Library(this);
 
     public User() {
 
@@ -20,13 +19,13 @@ public class User {
     public void borrowBook(Book book) {
         borrowedBooks.add(book);
         book.setBorrowed(true);
-        System.out.println(book + " has been added to the borrowed list");
+        System.out.println("\"" + book.getTitle() + "\"" + " has been added to the borrowed list");
     }
 
     public void returnBook(Book book) {
         borrowedBooks.remove(book);
         book.setBorrowed(false);
-        System.out.println(book + " has been removed from the borrowed list");
+        System.out.println("\"" + book.getTitle() + "\"" + " has been removed from the borrowed list");
     }
 
     public String getName() {

@@ -28,9 +28,6 @@ public class Book {
 
     @Override
     public String toString() {
-        return getTitle() + ", "
-                + getAuthor()
-                + " status: "
-                + (getBorrowed() ? "Not available" : "Available");
+        return "Title:      " + getTitle() + "\n" + "Author:     " + getAuthor() + "\n" + "Available:  " + (getBorrowed() ? "No" : "Yes") + "\n";
     }
 }

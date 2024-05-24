@@ -3,9 +3,11 @@ import java.util.List;
 
 public class Library {
     List<Book> books;
+    User currentUser;
 
     public Library(User user) {
         this.books = new ArrayList<Book>();
+        this.currentUser = user;
     }
 
     public void addBook(Book book) {
@@ -13,11 +15,11 @@ public class Library {
     }
 
     public void borrowBook(Book book) {
-        this.books.remove(book);
+        currentUser.borrowBook(book);;
     }
 
     public void returnBook(Book book) {
-        this.books.add(book);
+        currentUser.returnBook(book);
     }
 
     public void displayBooks() {
