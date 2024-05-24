@@ -5,16 +5,12 @@ public class Item {
     public Item(){
 
     }
-
+    // Constructor
     public Item(String description, boolean isDone){
         this.description = description;
         this.isDone = isDone;
     }
-
-    public void markAsDone(){
-        isDone = true;
-    }
-
+    //Getters and Setters
     public String getDescription() {
         return description;
     }
