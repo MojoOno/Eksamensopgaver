@@ -3,6 +3,7 @@ import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) {
         Team team = new Team("Slubberterne", new ArrayList<>());
+        Tournament tournament = new Tournament("Den store dyre look a-like turnering", new ArrayList<>());
         Player juniorPlayer = new JuniorPlayer("Høgen");
         Player juniorPlayer2 = new JuniorPlayer("Oksen");
         Player standardPlayer = new StandardPlayer("Ørnen");
@@ -23,11 +24,16 @@ public class Main {
 
         team.addPoints(8);
 
+        tournament.addPlayer(standardPlayer);
+        tournament.addPlayer(standardPlayer2);
+
+
         System.out.println(juniorPlayer);
         System.out.println(juniorPlayer2);
         System.out.println(standardPlayer);
         System.out.println(standardPlayer2);
         System.out.println(team);
+        System.out.println(tournament);
 
     }
 }
