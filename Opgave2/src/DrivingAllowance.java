@@ -40,7 +40,7 @@ public class DrivingAllowance {
 
     public int calculateCashBack(int month, int timesDriven) {
         // Beregn godtgørelse med ternary if
-        int moneyBack = (month <= 6) ? timesDriven * 60 : timesDriven * 80;     // Smid i metode for sig
+        moneyBack = (month <= 6) ? timesDriven * 60 : timesDriven * 80;     // Smid i metode for sig
         totalCashBack += moneyBack;                                             // Sætter totalCashBack til at være = sig selv + moneyBack
         return moneyBack;
 
