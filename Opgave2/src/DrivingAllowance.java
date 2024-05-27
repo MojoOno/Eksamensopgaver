@@ -2,10 +2,10 @@ import java.util.Scanner;
 
 public class DrivingAllowance {
 
-    String[] months = {"", "Januar", "Februar", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
-    int totalCashBack;
-    int moneyBack;
-    Scanner scan = new Scanner(System.in);
+    public String[] months = {"", "Januar", "Februar", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
+    public int totalCashBack;
+    public int moneyBack;
+    public Scanner scan = new Scanner(System.in);
 
     public DrivingAllowance() {
         totalCashBack = 0;
