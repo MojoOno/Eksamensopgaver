@@ -4,11 +4,13 @@ public class Tournament {
     String name;
     List<Player> players;
 
+    // Constructor
     public Tournament(String name, List<Player> players) {
         this.name = name;
         this.players = players;
     }
 
+    // Getters and setters
     public double getAverage() {
         if (players.isEmpty()) {
             return 0.0;
@@ -24,6 +26,7 @@ public class Tournament {
         players.add(player);
     }
 
+    // To string
     @Override
     public String toString() {
         return "Tournament Name: " + "\"" + name + "\"" + " - Average score: " + getAverage();

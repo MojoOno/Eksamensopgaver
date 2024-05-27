@@ -4,11 +4,13 @@ public class Team implements Player {
     String teamName;
     List<Player> playerList;
 
+    // Constructor
     public Team(String teamName, List<Player> playerList) {
         this.teamName = teamName;
         this.playerList = playerList;
     }
 
+    // Getters and setters
     @Override
     public int getPoints() {
         int totalPoints = 0;
@@ -30,6 +32,8 @@ public class Team implements Player {
             player.addPoints(customRound(splitPoints));
         }
     }
+
+    // Method that rounds either up or down
     private int customRound(double score) {
         if (score - (int) score < 0.6) {
             return (int) score;
@@ -38,9 +42,17 @@ public class Team implements Player {
         }
     }
 
+
+    public void displayTeamMembers(){
+        System.out.println("Members: ");
+        for (Player player : playerList) {
+            System.out.println(player);
+        }
+    }
+
+    // To string
     @Override
     public String toString() {
-
         return "\n" + "Team Name: " + getName() + " - Points: " + getPoints();
     }
 }

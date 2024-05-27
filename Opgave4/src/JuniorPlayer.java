@@ -1,12 +1,16 @@
+
+// Implements the interface, meaning it must have the same methods as Interface
 public class JuniorPlayer implements Player {
     String name;
     int points;
 
-    public JuniorPlayer(String name){
+    // Constructor
+    public JuniorPlayer(String name) {
         this.name = name;
         this.points = 0;
     }
 
+    // Getters and setters
     @Override
     public int getPoints() {
         return points;
@@ -22,10 +26,9 @@ public class JuniorPlayer implements Player {
         double score = pointsToAdd * 1.5;
         score = customRound(score);
         points += score;
-
     }
 
-    //Metode der runder op eller ned
+    // Method that rounds either up or down
     private int customRound(double score) {
         if (score - (int) score < 0.6) {
             return (int) score;
@@ -34,8 +37,9 @@ public class JuniorPlayer implements Player {
         }
     }
 
+    // To string
     @Override
-    public String toString(){
+    public String toString() {
         return "Name: " + getName() + " - Points: " + getPoints();
     }
 
