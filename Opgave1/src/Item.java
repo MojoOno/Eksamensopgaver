@@ -9,7 +9,7 @@ public class Item {
         this.isDone = isDone;
     }
 
-    //Getters and Setters
+    // Getters and Setters
     public String getDescription() {
         return description;
     }
@@ -22,6 +22,7 @@ public class Item {
         isDone = done;
     }
 
+    // To string
     @Override
     public String toString() {
         return description + ", " + (isDone ? "Done" : "Not done");

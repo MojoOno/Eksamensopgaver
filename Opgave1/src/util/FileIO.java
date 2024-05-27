@@ -11,7 +11,7 @@ public class FileIO {
     public ArrayList<String> readData(String path) {
         ArrayList<String> dataList = new ArrayList<>();
         File file = new File(path);
-        if(!file.exists()) {
+        if(!file.exists()) {                    // If no file exists, we create an empty file
             saveData("header", new ArrayList<>(), path);
         }
         try {
