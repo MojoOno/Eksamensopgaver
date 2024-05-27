@@ -4,7 +4,7 @@ public class Book {
     public boolean borrowed;
 
     // Constructor
-    public Book(String title, String author, boolean borrowed) {
+    public Book(String title, String author) {
         this.title = title;
         this.author = author;
         this.borrowed = false;
