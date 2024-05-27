@@ -21,6 +21,7 @@ public class Main {
         Plant flower5 = new Flower("I'm just here for the water Rose", LocalDate.of(2023, 7, 20), "Violet");
         Plant flower6 = new Flower("Rose Room", LocalDate.of(2023, 7, 20), "Violet");
 
+        // Adding plants to my garden
         garden.addPlant(tree1);
         garden.addPlant(tree2);
         garden.addPlant(tree3);
@@ -42,7 +43,10 @@ public class Main {
         ((FruitTree) fruitTree2).registerYield(6f);
         ((FruitTree) fruitTree2).registerYield(7f);
 
+        // Total average yield print
         System.out.println("Total yield of fruit on average is: " + garden.getTotalAverageYield() + "kg");
+
+        // Display flowers of colour
         System.out.println("----------");
         garden.displayFlowersOfColour("Red");
         System.out.println("----------");
@@ -50,8 +54,9 @@ public class Main {
         System.out.println("----------");
         garden.displayFlowersOfColour("Violet");
         System.out.println("----------");
-        garden.displayTreesHigherThan(4);
 
+        // Display trees higher than input
+        garden.displayTreesHigherThan(4);
         System.out.println("----------");
 
         //garden.displayPlants();
