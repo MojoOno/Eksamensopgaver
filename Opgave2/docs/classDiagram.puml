@@ -1,0 +1,30 @@
+@startuml
+'https://plantuml.com/class-diagram
+!pragma layout smetana
+
+    Class Main{
+    +static void main (String[] args)
+    }
+
+    Class DrivingAllowance{
+    +String[] months;
+    +int totalCashBack;
+    +int moneyBack;
+    +Scanner scan;
+
+    +DrivingAllowance();
+    +int[] createDrivingAllowanceFromString();
+    +int calculateCashBack(int month, int timesDriven);
+    +void registerDrivesDialog();
+    }
+
+    Main -- DrivingAllowance
+
+
+@enduml
+
+implements ..|>
+extends <|-- (is-a)
+composition *-- (must-have)
+Aggregation o-- (can-have)
+Associering <--

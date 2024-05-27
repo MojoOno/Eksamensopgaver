@@ -1,0 +1,70 @@
+@startuml
+'https://plantuml.com/class-diagram
+!pragma layout smetana
+
+    Class Main{
+    +static void main (String[] args)
+    }
+
+package util {
+    Class FileIO{
+    +readData(String path);
+    +saveData(String header, ArrayList<Object> dataList, String path);
+    }
+
+    Class TextUI{
+    -Scanner scan;
+
+    +void displayMsg(String msg);
+    +void displayList(List<String> list);
+    +String promptText(String s)
+    +int promptNumeric(String s, int maxValue);
+    +promptBinary(String msg, String accept, String reject);
+    +public int promptChoice(List<String> inputList, String s);
+    +boolean equals(Object o);
+    +int hashcode();
+    }
+
+}
+
+    Class Item{
+    +String description;
+    +boolean isDone;
+
+    +Item(String description, boolean isDone);
+    +String getDescription();
+    +boolean isDone();
+    +void setDone(boolean done);
+    +String toString();
+    }
+
+    Class TodoList{
+    +List<Item> itemList;
+    +String path;
+    +FileIO io;
+    +TextUI ui;
+
+    +TodoList(String path);
+    +Item createTodoListFromString(String todoString);
+    +void parseTodoListData();
+    +void displayList();
+    +void runDialog();
+    +void addToToDoDialog();
+    +void removeFromToDoDialog();
+    +void toDoOptionDialog();
+    -void saveuserData();
+    }
+
+Main -- TodoList
+TodoList *-- FileIO
+TodoList *-- TextUI
+TodoList o-- Item
+
+
+@enduml
+
+implements ..|>
+extends <|-- (is-a)
+composition *-- (must-have)
+Aggregation o-- (can-have)
+Associering <--

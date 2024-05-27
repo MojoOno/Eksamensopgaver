@@ -1,0 +1,78 @@
+@startuml
+'https://plantuml.com/class-diagram
+!pragma layout smetana
+
+    Class Main{
+    +static void main (String[] args)
+    }
+
+    Interface Player{
+    +int getPoints();
+    +String getName();
+    +void addPoints(double pointsToAdd);
+    }
+
+    Class JuniorPlayer{
+    +String name;
+    +int points;
+
+    +JuniorPlayer(String name);
+    +int getPoints();
+    +String getName();
+    +void addPoints(double pointsToAdd);
+    -int customRound(double score);
+    +String toString();
+    }
+
+    Class StandardPlayer{
+    +String name;
+    +int points;
+
+    +StandardPlayer(String name);
+    +int getPoints();
+    +String getName();
+    +void addPoints(double pointsToAdd);
+    +String toString();
+    }
+
+    Class Team{
+    +String teamName;
+    +List<Player> playerList;
+
+    +Team(String teamName, List<Player> playerList);
+    +int getPoints();
+    +String getName();
+    +void addPoints(double pointsToAdd);
+    -int customRound(double score);
+    +void displayTeamMembers();
+    +String toString();
+    }
+
+    Class Tournament{
+    +String name;
+    +List<Player> players;
+
+    +Tournament(String name, List<Player> players);
+    +double getAverage();
+    +void addPLayer(Player player);
+    +String toString();
+    }
+
+    Main -- Team
+    Main -- JuniorPlayer
+    Main -- StandardPlayer
+    Main -- Tournament
+    JuniorPlayer ..|> Player
+    StandardPlayer ..|> Player
+    Team ..|> Player
+    Tournament o-- Team
+    Tournament o-- StandardPlayer
+    Tournament o-- JuniorPlayer
+
+@enduml
+
+implements ..|>
+extends <|-- (is-a)
+composition *-- (must-have)
+Aggregation o-- (can-have)
+Associering <--

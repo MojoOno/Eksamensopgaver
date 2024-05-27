@@ -1,0 +1,61 @@
+@startuml
+'https://plantuml.com/class-diagram
+!pragma layout smetana
+
+    Class Main{
+    +static void main (String[] args)
+    }
+
+    Class Book{
+    +String title;
+    +String author;
+    +boolean borrowed;
+
+    +Book(String title, String author);
+    +String getTitle();
+    +String getAuthor();
+    +boolean getBorrowed();
+    +Book setBorrowed(boolean borrowed);
+    +String toString();
+    }
+
+    Class Library{
+    +List<Book> bookList;
+    +User currentUser;
+
+    +Library(User user);
+    +void addBook(Book book);
+    +void borrowBook(Book book);
+    +void returnBook(Book book);
+    +void displayBooks();
+    }
+
+    Class User{
+    +String name;
+    +int userNumber;
+    +List<Book> borrowedBooks;
+
+    +User(String name, int userNumber, ArrrayList<Book> borrowedBooks);
+    +void borrowBook(Book book);
+    +void returnBook(Book book);
+    +String getName();
+    +int getUserNumber();
+    +void getBorrowedBooks();
+
+    }
+
+
+Main -- Library
+Main --- User
+Library *-- Book
+Library o-- User
+User o-- Book
+
+
+@enduml
+
+implements ..|>
+extends <|-- (is-a)
+composition *-- (must-have)
+Aggregation o-- (can-have)
+Associering <--
