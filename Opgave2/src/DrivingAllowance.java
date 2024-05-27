@@ -42,7 +42,7 @@ public class DrivingAllowance {
         // Beregn godtgørelse med ternary if
         moneyBack = (month <= 6) ? timesDriven * 60 : timesDriven * 80;         // Smid i metode for sig
         totalCashBack += moneyBack;                                             // Sætter totalCashBack til at være = sig selv + moneyBack
-        return moneyBack;
+        return moneyBack;                                                       // Returnerer moneyBack da jeg gerne vil vide hvad godtgørelse for den individuelle måned er
 
     }
 
