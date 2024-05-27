@@ -6,8 +6,6 @@ public class User {
     public int userNumber;
     List<Book> borrowedBooks;
 
-    public User() {
-    }
 
     // Constructor
     public User(String name, int userNumber, ArrayList<Book> borrowedBooks) {
