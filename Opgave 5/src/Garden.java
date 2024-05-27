@@ -4,42 +4,60 @@ import java.util.List;
 public class Garden {
     private List<Plant> plantList = new ArrayList<>();
 
-    public Garden(){
+    public Garden() {
     }
 
-    public void addPlant(Plant plant){
+    public void addPlant(Plant plant) {
         plantList.add(plant);
     }
 
-    public float getTotalYield(){
+    public float getTotalAverageYield() {
         float sum = 0;
-        for(Plant plant: plantList){
-            if (plant instanceof FruitTree){
+        for (Plant plant : plantList) {
+            if (plant instanceof FruitTree) {
                 sum += ((FruitTree) plant).getAverageYield();
-
             }
         }
-        System.out.println("Total yield of fruit is: " + sum + "kg");
         return sum;
     }
 
-    public void displayFlowersOfColour(String colour){
+    public void displayFlowersOfColour(String colour) {
         System.out.println("The flowers of colour " + colour + " are:");
-        for(Plant plant : plantList){
-            if (plant instanceof Flower){
-                if(((Flower) plant).getColour().equalsIgnoreCase(colour)){
-                    System.out.println("Flower: " + plant.getSpecies() + " planted on " + plant.getDatePlanted());
+        for (Plant plant : plantList) {
+            if (plant instanceof Flower) {
+                if (((Flower) plant).getColour().equalsIgnoreCase(colour)) {
+                    System.out.println(plant);
                 }
             }
         }
 
     }
 
-    public int getTreesHigherThan(float meter){
-        return 0;
+    public void displayTreesHigherThan(float meter) {
+        boolean found = false;
+        System.out.println("Trees higher than " + meter + " meters:");
+        for (Plant plant : plantList) {
+            if (plant instanceof Tree && ((Tree) plant).getHeight() >= meter) {
+                System.out.println(plant);
+                found = true;
+            }
+        }
+        if (!found) {
+            System.out.println("Trees not higher than " + meter + " meters:");
+        }
     }
 
-    public Plant getOldestPlant(){
+    public Plant getOldestPlant() {
         return null;
     }
+
+    public void displayPlants(){
+        for (Plant plant : plantList) {
+            System.out.println(plant);
+        }
+
+    }
 }
+
+
+

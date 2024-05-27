@@ -15,6 +15,6 @@ public class Tree extends Plant{
 
     @Override
     public String toString() {
-        return "";
+        return "Tree: " + getSpecies() + " -- Meters high: " + getHeight() + " -- Planted: " + getDatePlanted();
     }
 }

@@ -14,6 +14,6 @@ public class Flower extends Plant{
 
     @Override
     public String toString() {
-        return "";
+        return "Flower: " + getSpecies() + " Colour: " + getColour() + " Planted: " + getDatePlanted();
     }
 }

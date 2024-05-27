@@ -24,6 +24,6 @@ public class FruitTree extends Tree{
 
     @Override
     public String toString() {
-        return "";
+        return "Fruit Tree: " + getSpecies() + " -- Meters high: " + getHeight() + " -- Average yield: " + getAverageYield() + " -- Planted: " + getDatePlanted();
     }
 }
