@@ -23,11 +23,16 @@ public class Statistics {
         return counts;
     }
 
-    public void displayResults(){
-        int[] results = results(100);
+    public void displayResults(int numberOfThrows){
+        int[] results = results(numberOfThrows);
         for (int i = 0; i < results.length; i++){
             System.out.println("Antal " + (i + 1) + "'ere: " + results[i]);
         }
+    }
+
+    public void displayExpectedProbabilities(int numberOfThrows){
+        double expectedProbability = numberOfThrows * ((double) 1 / die.getSides());
+        System.out.println("Expected probability of getting any given number on a " + die.getSides() + " sided die is: " + expectedProbability);
     }
 
 }

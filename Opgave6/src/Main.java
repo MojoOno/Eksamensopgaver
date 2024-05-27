@@ -3,9 +3,10 @@ public class Main {
         Die die = new Die(6);
         Statistics stats = new Statistics(die);
 
-        stats.displayResults();
+        stats.displayResults(100);
 
+        System.out.println("----------");
 
-
+        stats.displayExpectedProbabilities(100);
     }
 }
