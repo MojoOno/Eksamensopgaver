@@ -18,7 +18,7 @@ public class Statistics {
             counts[roll - 1]++;                     // Here I tell my array of integers, that the roll I just rolled must be increased by 1.
                                                     // The reason for the "-1" is to add it to the right place in the array.
                                                     // Example: when we roll the die, the dice rolls a 5 fx. This I want to add to the fifth place in the array which is index 4.
-                                                    // In order to place it the roll 5 correctly, i minus by 1.
+                                                    // In order to place the roll 5 correctly, i minus by 1.
         }
         return counts;
     }
