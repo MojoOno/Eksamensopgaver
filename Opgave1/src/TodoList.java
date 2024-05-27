@@ -29,8 +29,8 @@ public class TodoList {
     // Parsing our data from the program, and into the csv file.
     public void parseTodoListData() {
         ArrayList<String> itemsList = io.readData(path);        // Making our arrayList = our readData method from FileIO
-        for (String description : itemsList) {                  // Running through our list, which is now reading from our file.
-            Item item = createTodoListFromString(description);  // Making new Item objects
+        for (String lineData : itemsList) {                     // Running through our list, which is now reading from our file.
+            Item item = createTodoListFromString(lineData);     // Making new Item objects
             itemList.add(item);                                 // Adding the item to our list, that is instantiated in our constructor
         }
     }
