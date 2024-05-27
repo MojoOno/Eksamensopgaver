@@ -26,7 +26,7 @@ public class Main {
 
         tournament.addPlayer(standardPlayer);
         tournament.addPlayer(standardPlayer2);
-
+        //tournament.addPlayer(juniorPlayer);
 
         System.out.println(juniorPlayer);
         System.out.println(juniorPlayer2);
