@@ -2,18 +2,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Library {
-    List<Book> books;
-    User currentUser;
+    public List<Book> bookList;
+    public User currentUser;
 
     // Constructor
     public Library(User user) {
-        this.books = new ArrayList<Book>();
+        this.bookList = new ArrayList<Book>();
         this.currentUser = user;
     }
 
     // Adds books to the library's selection of books
     public void addBook(Book book) {
-        this.books.add(book);
+        this.bookList.add(book);
     }
 
     // Calls the users borrow book method.
@@ -29,7 +29,7 @@ public class Library {
     // Displays books in the library.
     public void displayBooks() {
         System.out.println("Books in the library:");
-        for (Book book : books) {
+        for (Book book : bookList) {
             System.out.println(book);
         }
     }
