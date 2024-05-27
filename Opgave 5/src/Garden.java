@@ -8,7 +8,6 @@ public class Garden {
     public Garden() {
     }
 
-
     public void addPlant(Plant plant) {
         plantList.add(plant);
     }
