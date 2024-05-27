@@ -23,9 +23,6 @@ public class JuniorPlayer implements Player {
         score = customRound(score);
         points += score;
 
-
-        //double score = (pointsToAdd * 1.5);
-        //points += ((int) score);
     }
 
     //Metode der runder op eller ned
