@@ -3,7 +3,7 @@ public class Main {
         Die die = new Die(6);
         Statistics stats = new Statistics(die);
 
-        stats.displayResults(100);
+        stats.displayResults(100000);
 
         System.out.println("----------");
 

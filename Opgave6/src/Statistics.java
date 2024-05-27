@@ -1,13 +1,12 @@
 public class Statistics {
     Die die;    // declaring a die object
 
-
     // Constructor
     public Statistics(Die die) {
         this.die = die;
     }
 
-    // Results method that throws a dice, adds it to an Array, and counts amount of time a dice has been rolled.
+    // Results method that throws a die, adds it to an Array, and counts amount of time a die has been rolled.
     public int[] results (int numberOfThrows){
         int sides = die.getSides();                 // Making a sides variable in order to make the code more generic
         int[] counts = new int[sides];              // Instantiating an array og ints, that contains dice eyes. Sides is used to determin the size of the array.
@@ -29,7 +28,7 @@ public class Statistics {
             System.out.println("Antal " + (i + 1) + "'ere: " + results[i]);
         }
     }
-
+    // A method that gives us the expected amount of times we will roll one of the sides on the die.
     public void displayExpectedProbabilities(int numberOfThrows){
         double expectedProbability = numberOfThrows * ((double) 1 / die.getSides());
         System.out.println("Expected probability of getting any given number on a " + die.getSides() + " sided die is: " + expectedProbability);
