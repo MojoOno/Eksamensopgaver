@@ -8,11 +8,11 @@ public class Main {
 
 
         // Making book objects
-        Book book1 = new Book("Hitchhikers guide to passing the exam", "Andy the Dragon", false);
-        Book book2 = new Book("Come get it", "Mike Tyson", false);
-        Book book3 = new Book("How to steer a boat", "Captain Obvious", false);
-        Book book4 = new Book("124", "Number Blind Bojack", false);
-        Book book5 = new Book("I didn't do it", "Mette Frederiksen", false);
+        Book book1 = new Book("Hitchhikers guide to passing the exam", "Andy the Dragon");
+        Book book2 = new Book("Come get it", "Mike Tyson");
+        Book book3 = new Book("How to steer a boat", "Captain Obvious");
+        Book book4 = new Book("124", "Number Blind Bojack");
+        Book book5 = new Book("I didn't do it", "Mette Frederiksen");
 
         // Adding and testing in main
         library.addBook(book1);
