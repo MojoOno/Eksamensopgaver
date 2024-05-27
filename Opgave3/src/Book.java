@@ -3,12 +3,14 @@ public class Book {
     public String author;
     public boolean borrowed;
 
+    // Constructor
     public Book(String title, String author, boolean borrowed) {
         this.title = title;
         this.author = author;
         this.borrowed = false;
     }
 
+    // Getters and setters
     public String getTitle() {
         return title;
     }
@@ -26,6 +28,7 @@ public class Book {
         return this;
     }
 
+    // To string
     @Override
     public String toString() {
         return "Title:      " + getTitle() + "\n" + "Author:     " + getAuthor() + "\n" + "Available:  " + (getBorrowed() ? "No" : "Yes") + "\n";

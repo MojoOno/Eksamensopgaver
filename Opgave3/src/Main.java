@@ -2,15 +2,19 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
+        // Making a user and library object
         User user = new User("Franck", 666, new ArrayList<>());
         Library library = new Library(user);
 
-        Book book1 = new Book("How to write an exam question for beginners", "Andy the Dragon", false);
+
+        // Making book objects
+        Book book1 = new Book("Hitchhikers guide to passing the exam", "Andy the Dragon", false);
         Book book2 = new Book("Come get it", "Mike Tyson", false);
         Book book3 = new Book("How to steer a boat", "Captain Obvious", false);
-        Book book4 = new Book("123", "456", false);
-        Book book5 = new Book("Where am I?", "Mette Frederiksen", false);
+        Book book4 = new Book("124", "Number Blind Bojack", false);
+        Book book5 = new Book("I didn't do it", "Mette Frederiksen", false);
 
+        // Adding and testing in main
         library.addBook(book1);
         library.addBook(book2);
         library.addBook(book3);
@@ -24,11 +28,12 @@ public class Main {
         library.borrowBook(book1);
 
         System.out.println("----------");
-        //library.displayBooks();
 
-        //library.returnBook(book1);
+        user.getBorrowedBooks();
 
         System.out.println("----------");
+
+        library.returnBook(book1);
 
         user.getBorrowedBooks();
 
