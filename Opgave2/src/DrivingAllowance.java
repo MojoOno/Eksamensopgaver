@@ -17,7 +17,7 @@ public class DrivingAllowance {
         int timesDriven = 0;
         try {
             String[] input = scan.nextLine().split(",");                   // Gør at jeg kan indtaste flere ting på samme linje og at det skal separeres ved ","
-            month = Integer.parseInt(input[0]);                                  // Sætter month til at være og en int
+            month = Integer.parseInt(input[0]);                                  // Sætter month til at være en int
             if (month <= 0 || month > 12) {
                 System.out.println("Invalid choice of month. Try again");
                 return createDrivingAllowanceFromString();
@@ -40,7 +40,7 @@ public class DrivingAllowance {
 
     public int calculateCashBack(int month, int timesDriven) {
         // Beregn godtgørelse med ternary if
-        moneyBack = (month <= 6) ? timesDriven * 60 : timesDriven * 80;     // Smid i metode for sig
+        moneyBack = (month <= 6) ? timesDriven * 60 : timesDriven * 80;         // Smid i metode for sig
         totalCashBack += moneyBack;                                             // Sætter totalCashBack til at være = sig selv + moneyBack
         return moneyBack;
 
