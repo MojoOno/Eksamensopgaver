@@ -1,29 +1,29 @@
 import java.util.List;
 
 public class Tournament {
-    String name;
-    List<Player> players;
+    private String name;
+    private List<Player> playerList;
 
     // Constructor
-    public Tournament(String name, List<Player> players) {
+    public Tournament(String name, List<Player> playerList) {
         this.name = name;
-        this.players = players;
+        this.playerList = playerList;
     }
 
     // Getters and setters
     public double getAverage() {
-        if (players.isEmpty()) {
+        if (playerList.isEmpty()) {
             return 0.0;
         }
         int totalPoints = 0;
-        for (Player player : players) {
+        for (Player player : playerList) {
             totalPoints += player.getPoints();
         }
-        return (double) totalPoints / players.size();
+        return (double) totalPoints / playerList.size();
     }
 
     public void addPlayer(Player player){
-        players.add(player);
+        playerList.add(player);
     }
 
     // To string

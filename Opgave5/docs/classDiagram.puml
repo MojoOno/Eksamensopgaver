@@ -1,28 +1,63 @@
 @startuml
 'https://plantuml.com/class-diagram
+!pragma layout smetana
 
-abstract class AbstractList
-abstract AbstractCollection
-interface List
-interface Collection
+        Class Main{
+        +static void main (String[] args)
+        }
 
-List <|-- AbstractList
-Collection <|-- AbstractCollection
+        Class Flower{
+        -String colour;
 
-Collection <|- List
-AbstractCollection <|- AbstractList
-AbstractList <|-- ArrayList
+        +Flower(String species, LocalDate datePlanted, String colour);
+        +String getColour();
+        +String toString();
+        }
 
-class ArrayList {
-Object[] elementData
-size()
-}
+        Class FruitTree{
+        -List<Float> yieldList;
 
-enum TimeUnit {
-DAYS
-HOURS
-MINUTES
-}
+        +FruitTree(String species, LocalDate datePlanted, float height);
+        +void registerYield(float yeild);
+        +float getAverageYield();
+        +String toString();
+        }
+
+        Class Garden{
+        -List<Plant> plantList;
+
+        +Garden();
+        +addPlant(Plant plant);
+        +void getTotalAverageYield();
+        +void displayFlowersOfColour(String colour);
+        +void displayTreesHigherThan(float meter);
+        }
+
+        Class Plant{
+        -String species;
+        -LocalDate datePlanted;
+
+        +String getSpecies();
+        +LocalDate getDatePlanted();
+        }
+
+        Class Tree{
+        -Float height;
+
+        +Tree(String species, LocalDate datePlanted, float height);
+        +float getHeight();
+        +String toString();
+        }
+
+
+        Garden *-- Plant
+        Plant <|-- Flower
+        Plant <|-- Tree
+        Tree <|-- FruitTree
+
+
+
+
 
 @enduml
 

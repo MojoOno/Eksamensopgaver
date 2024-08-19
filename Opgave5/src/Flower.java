@@ -9,7 +9,6 @@ public class Flower extends Plant{
         this.colour = colour;
     }
 
-
     // Getters and setters
     public String getColour() {
         return colour;
@@ -18,6 +17,6 @@ public class Flower extends Plant{
     // To string
     @Override
     public String toString() {
-        return "Flower: " + getSpecies() + " Colour: " + getColour() + " Planted: " + getDatePlanted();
+        return "Flower: " + getSpecies() + " -- Colour: " + getColour() + " -- Planted: " + getDatePlanted();
     }
 }

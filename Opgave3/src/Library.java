@@ -2,12 +2,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Library {
-    public List<Book> bookList;
-    public User currentUser;
+    private List<Book> bookList;
+    private User currentUser;
 
     // Constructor
     public Library(User user) {
-        this.bookList = new ArrayList<Book>();
+        this.bookList = new ArrayList<>();
         this.currentUser = user;
     }
 

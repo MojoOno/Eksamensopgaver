@@ -2,9 +2,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class User {
-    public String name;
-    public int userNumber;
-    List<Book> borrowedBooks;
+    private String name;
+    private int userNumber;
+    private List<Book> borrowedBooks;
 
 
     // Constructor

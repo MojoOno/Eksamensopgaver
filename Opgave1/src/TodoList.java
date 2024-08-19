@@ -5,13 +5,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TodoList {
-    public List<Item> itemList;
-    public String path;
-    public FileIO io = new FileIO();
-    public TextUI ui = new TextUI();
+    private String name;
+    private List<Item> itemList;
+    private String path;
+    private FileIO io = new FileIO();
+    private TextUI ui = new TextUI();
 
     // Constructor
-    public TodoList(String path) {
+    public TodoList(String name, String path) {
+        this.name = name;
         itemList = new ArrayList<>();
         this.path = path;
         this.parseTodoListData();
@@ -82,9 +84,15 @@ public class TodoList {
 
     // Method that adds the users choice to the todoList
     public void addToToDoDialog() {
-        String choice = ui.promptText("Hvad vil du tilføje til listen?");
-        this.itemList.add(new Item(choice, false));
-        ui.displayMsg("Tilføjet til to do listen");
+
+        if (itemList.size() < 21) {
+            String choice = ui.promptText("Hvad vil du tilføje til listen?");
+            this.itemList.add(new Item(choice, false));
+            ui.displayMsg("Tilføjet til to do listen");
+        } else {
+            ui.displayMsg("Det kan du ikke.");
+        }
+
     }
 
     // Method that displays our list and gives the user the option to remove things from the list

@@ -7,9 +7,9 @@
     }
 
     Class Book{
-    +String title;
-    +String author;
-    +boolean borrowed;
+    -String title;
+    -String author;
+    -boolean borrowed;
 
     +Book(String title, String author);
     +String getTitle();
@@ -20,8 +20,8 @@
     }
 
     Class Library{
-    +List<Book> bookList;
-    +User currentUser;
+    -List<Book> bookList;
+    -User currentUser;
 
     +Library(User user);
     +void addBook(Book book);
@@ -31,9 +31,9 @@
     }
 
     Class User{
-    +String name;
-    +int userNumber;
-    +List<Book> borrowedBooks;
+    -String name;
+    -int userNumber;
+    -List<Book> borrowedBooks;
 
     +User(String name, int userNumber, ArrrayList<Book> borrowedBooks);
     +void borrowBook(Book book);
@@ -45,8 +45,7 @@
     }
 
 
-Main -- Library
-Main --- User
+
 Library *-- Book
 Library o-- User
 User o-- Book

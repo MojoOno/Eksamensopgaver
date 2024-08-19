@@ -13,8 +13,8 @@
     }
 
     Class JuniorPlayer{
-    +String name;
-    +int points;
+    -String name;
+    -int points;
 
     +JuniorPlayer(String name);
     +int getPoints();
@@ -25,8 +25,8 @@
     }
 
     Class StandardPlayer{
-    +String name;
-    +int points;
+    -String name;
+    -int points;
 
     +StandardPlayer(String name);
     +int getPoints();
@@ -36,8 +36,8 @@
     }
 
     Class Team{
-    +String teamName;
-    +List<Player> playerList;
+    -String teamName;
+    -List<Player> playerList;
 
     +Team(String teamName, List<Player> playerList);
     +int getPoints();
@@ -49,25 +49,24 @@
     }
 
     Class Tournament{
-    +String name;
-    +List<Player> players;
+    -String name;
+    -List<Player> playerList;
 
-    +Tournament(String name, List<Player> players);
+    +Tournament(String name, List<Player> playerList);
     +double getAverage();
-    +void addPLayer(Player player);
+    +void addPlayer(Player player);
     +String toString();
     }
 
-    Main -- Team
-    Main -- JuniorPlayer
-    Main -- StandardPlayer
-    Main -- Tournament
+
     JuniorPlayer ..|> Player
     StandardPlayer ..|> Player
     Team ..|> Player
     Tournament o-- Team
     Tournament o-- StandardPlayer
     Tournament o-- JuniorPlayer
+    Team o-- JuniorPlayer
+    Team o-- StandardPlayer
 
 @enduml
 

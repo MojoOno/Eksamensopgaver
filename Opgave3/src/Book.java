@@ -1,7 +1,7 @@
 public class Book {
-    public String title;
-    public String author;
-    public boolean borrowed;
+    private String title;
+    private String author;
+    private boolean borrowed;
 
     // Constructor
     public Book(String title, String author) {

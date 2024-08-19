@@ -1,8 +1,8 @@
 
 // Implements the interface, meaning it must have the same methods as Interface
 public class StandardPlayer implements Player {
-    String name;
-    int points;
+    private String name;
+    private int points;
 
     // Constructor
     public StandardPlayer(String name) {

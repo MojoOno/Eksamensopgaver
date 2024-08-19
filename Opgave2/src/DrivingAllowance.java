@@ -2,10 +2,10 @@ import java.util.Scanner;
 
 public class DrivingAllowance {
 
-    public String[] months = {"", "Januar", "Februar", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
-    public int totalCashBack;
-    public int moneyBack;
-    public Scanner scan = new Scanner(System.in);
+    private String[] months = {"", "Januar", "Februar", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
+    private int totalCashBack;
+    private int moneyBack;
+    private Scanner scan = new Scanner(System.in);
 
     public DrivingAllowance() {
         totalCashBack = 0;
@@ -18,16 +18,19 @@ public class DrivingAllowance {
         int timesDriven = 0;
         try {
             String[] input = scan.nextLine().split(",");                   // Since the program is a system.in, this array of strings makes it possible to type in several things separated by ","
+
             month = Integer.parseInt(input[0]);                                  // Stores the input as an int
             if (month <= 0 || month > 12) {
                 System.out.println("Invalid choice of month. Try again");
                 return createDrivingAllowanceFromString();
             }
+
             timesDriven = Integer.parseInt(input[1]);                           // Stores the input as an int
             if (timesDriven <= 0 || timesDriven > 10) {
                 System.out.println("Your times driven is either 0 or more than 10. Try again");
                 return createDrivingAllowanceFromString();
             }
+
         } catch (NumberFormatException e) {                                     // A catch that handles a situation where input is not a number.
             System.out.println("Error. Input must be a number. Try again");
             return createDrivingAllowanceFromString();
@@ -56,11 +59,11 @@ public class DrivingAllowance {
             int[] input = createDrivingAllowanceFromString();       // instantiating a new int [] which has been through the validating method.
             int month = input[0];                                   // Stores input[0] in an int month variable
             int timesDriven = input[1];                             // Same as above
-            int moneyBack = calculateCashBack(month, timesDriven);
+            int moneyBack = calculateCashBack(month, timesDriven);  // Stores the calculations in our cashBack method in an int moneyBack variable
 
             System.out.println("Godtgørelse for " + months[month] + ": " + moneyBack + ",-"); // Prints moneyBack for the input month.
 
-            System.out.println("Forsæt med at registrere kørsel Y/N"); // The following code asks if we want to continue
+            System.out.println("Forsæt med at registrere kørsel Y/N?"); // The following code asks if we want to continue
             String registerMore = scan.nextLine().toUpperCase();
             if (!registerMore.equals("Y")) {                           // If we type "Y" we will repeat the loop.
                 break;                                                 // If we type "N" we break out of the loop.

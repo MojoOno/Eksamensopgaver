@@ -1,8 +1,8 @@
 
 // Implements the interface, meaning it must have the same methods as Interface
 public class JuniorPlayer implements Player {
-    String name;
-    int points;
+    private String name;
+    private int points;
 
     // Constructor
     public JuniorPlayer(String name) {

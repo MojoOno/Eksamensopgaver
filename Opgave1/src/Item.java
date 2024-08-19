@@ -1,6 +1,6 @@
 public class Item {
-    public String description;
-    public boolean isDone;
+    private String description;
+    private boolean isDone;
 
 
     // Constructor

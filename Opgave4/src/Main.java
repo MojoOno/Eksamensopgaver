@@ -4,17 +4,20 @@ public class Main {
     public static void main(String[] args) {
         // Making new objects
         Team team = new Team("Slubberterne", new ArrayList<>());
+        Team team2 = new Team("Taberne", new ArrayList<>());
+
         Tournament tournament = new Tournament("Den store dyre look a-like turnering", new ArrayList<>());
+
         Player juniorPlayer = new JuniorPlayer("Høgen");
         Player juniorPlayer2 = new JuniorPlayer("Oksen");
         Player standardPlayer = new StandardPlayer("Ørnen");
         Player standardPlayer2 = new StandardPlayer("Hunden");
 
         // Adding players to
-        team.playerList.add(juniorPlayer);
-        team.playerList.add(juniorPlayer2);
-        team.playerList.add(standardPlayer);
-        team.playerList.add(standardPlayer2);
+        team.getPlayerList().add(juniorPlayer);
+        team2.getPlayerList().add(juniorPlayer2);
+        team.getPlayerList().add(standardPlayer);
+        team2.getPlayerList().add(standardPlayer2);
 
         // Adding points to junior players
         juniorPlayer.addPoints(10);
@@ -39,11 +42,15 @@ public class Main {
         System.out.println(juniorPlayer2);
         System.out.println(standardPlayer);
         System.out.println(standardPlayer2);
+
         System.out.println("----------");
-        System.out.println(team);
         team.displayTeamMembers();
+        team2.displayTeamMembers();
         System.out.println("----------");
+
         System.out.println(tournament);
+        System.out.println("----------");
+
 
     }
 }

@@ -8,8 +8,8 @@
 
 package util {
     Class FileIO{
-    +readData(String path);
-    +saveData(String header, ArrayList<Object> dataList, String path);
+    -readData(String path);
+    -saveData(String header, ArrayList<Object> dataList, String path);
     }
 
     Class TextUI{
@@ -28,8 +28,8 @@ package util {
 }
 
     Class Item{
-    +String description;
-    +boolean isDone;
+    -String description;
+    -boolean isDone;
 
     +Item(String description, boolean isDone);
     +String getDescription();
@@ -39,10 +39,10 @@ package util {
     }
 
     Class TodoList{
-    +List<Item> itemList;
-    +String path;
-    +FileIO io;
-    +TextUI ui;
+    -List<Item> itemList;
+    -String path;
+    -FileIO io;
+    -TextUI ui;
 
     +TodoList(String path);
     +Item createTodoListFromString(String todoString);

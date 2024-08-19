@@ -7,10 +7,10 @@
     }
 
     Class DrivingAllowance{
-    +String[] months;
-    +int totalCashBack;
-    +int moneyBack;
-    +Scanner scan;
+    -String[] months;
+    -int totalCashBack;
+    -int moneyBack;
+    -Scanner scan;
 
     +DrivingAllowance();
     +int[] createDrivingAllowanceFromString();

@@ -1,8 +1,8 @@
 import java.util.List;
 
 public class Team implements Player {
-    String teamName;
-    List<Player> playerList;
+    private String teamName;
+    private List<Player> playerList;
 
     // Constructor
     public Team(String teamName, List<Player> playerList) {
@@ -22,6 +22,10 @@ public class Team implements Player {
 
     public String getName() {
         return teamName;
+    }
+
+    public List<Player> getPlayerList() {
+        return playerList;
     }
 
     @Override
@@ -44,10 +48,11 @@ public class Team implements Player {
 
 
     public void displayTeamMembers(){
-        System.out.println("Members: ");
+        System.out.println(teamName);
         for (Player player : playerList) {
             System.out.println(player);
         }
+        System.out.println("Total points: " + getPoints());
     }
 
     // To string

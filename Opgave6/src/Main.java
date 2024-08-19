@@ -1,12 +1,18 @@
 public class Main {
     public static void main(String[] args) {
-        Die die = new Die(6);
+
+        // Making objects
+        Die die = new Die(20);
         Statistics stats = new Statistics(die);
 
-        stats.displayResults(100000);
+
+        //Calling methods and prints
+        stats.displayResults(1);
 
         System.out.println("----------");
 
-        stats.displayExpectedProbabilities(100);
+        stats.displayExpectedProbabilities(1);
+
+
     }
 }

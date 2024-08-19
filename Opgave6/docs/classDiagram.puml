@@ -1,28 +1,32 @@
 @startuml
 'https://plantuml.com/class-diagram
+!pragma layout smetana
 
-abstract class AbstractList
-abstract AbstractCollection
-interface List
-interface Collection
+    Class Main{
+    +static void main (String[] args)
+    }
 
-List <|-- AbstractList
-Collection <|-- AbstractCollection
+    Class Die{
+    -int sides;
+    -Random random;
 
-Collection <|- List
-AbstractCollection <|- AbstractList
-AbstractList <|-- ArrayList
+    +Die(int sides);
+    +int throwDie();
+    +int getSides();
+    }
 
-class ArrayList {
-Object[] elementData
-size()
-}
+    Class Statistics{
+    -Die die;
 
-enum TimeUnit {
-DAYS
-HOURS
-MINUTES
-}
+    +Statistics(Die die);
+    +int[] results(int numberOfThrows);
+    +void displayResults(int numberOfThrows);
+    +void displayExpectedProbabilities(int numberOfThrows);
+    }
+
+    Die o-- Statistics
+
+
 
 @enduml
 

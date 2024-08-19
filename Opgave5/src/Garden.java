@@ -23,7 +23,6 @@ public class Garden {
         return sum;
     }
 
-
     // Displays the flowers of the specified colour taken as input
     public void displayFlowersOfColour(String colour) {
         System.out.println("The flowers of colour " + colour + " are:");
@@ -49,17 +48,6 @@ public class Garden {
         if (!found) {                           // if a tree was not found, we print a message stating no trees are above input
             System.out.println("There are no trees higher than " + meter + " meters:");
         }
-    }
-
-    public Plant getOldestPlant() {
-        return null;
-    }
-
-    public void displayPlants(){
-        for (Plant plant : plantList) {
-            System.out.println(plant);
-        }
-
     }
 }
 
